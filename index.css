@@ -14,7 +14,11 @@
     --main-title-shadow: #081c15;
     --intro-border: #081c15;
     --bar-theme: #081c15;
-
+    --li-border: #081c15;
+    --resume-button-theme: #081c15;
+    --resume-button-bars: #95d5b2;
+    --resume-text-color: #d8f3dc;
+    --project-section-theme: #081c15;
 }
 
 html {
@@ -26,7 +30,7 @@ html {
 
 .navigation {
     margin: 7em;
-    margin-bottom: 0;
+    margin-bottom: 10em;
 }
 
 .nav-bar {
@@ -45,9 +49,10 @@ html {
     border-radius: 0.2rem;
     background-color: var(--main-title-background);
     color: var(--main-title-text);
+    transform: translate(-1rem, -1rem);
 }
 
-.title > .shadow, .menu-button > .shadow {
+.shadow {
     width: 100%;
     height: 100%;
     background-color: var(--main-title-shadow);
@@ -55,7 +60,6 @@ html {
     top: 0;
     left: 0;
     z-index: -1000;
-    transform: translate(0.5rem, 0.5rem);
 }
 
 svg {
@@ -66,10 +70,12 @@ svg {
     background-color: var(--main-theme);
     padding: 1em;
     border: 0.2em solid var(--main-title-border);
+    transform: translate(-1rem, -1rem);
 }
 
 .menu-button {
     position: relative;
+    z-index: 10;
 }
 
 
@@ -81,20 +87,76 @@ svg {
 
 .intro {
     width: 100%;
-    padding: 5em;
+    padding: 10em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 0.2em solid var(--intro-border);
+    gap: 5em;
+    position: relative;
+}
+
+.intro .border {
+    background-color: var(--bar-theme);
+    position: absolute;
+    padding: 0.1em;
+}
+
+.intro .border.top {
+    top: 0;
+    
+}
+
+.intro .border.left {
+    left: 0;
+}
+
+.intro .border.right {
+    right: 0;
+}
+
+.intro .border.bottom {
+    bottom: 0;
 }
 
 .intro > .hello-text{
     font-size: 7rem;
 }
 
+.hello-text + p {
+    font-size: 2rem;
+}
 
 /* animation for menu */
+
+.menu{
+    display: flex;
+    gap: 1em;
+}
+
+.menu > .section-list {
+    display: flex;
+}
+
+.section-list > * {
+    align-self: flex-end;
+}
+
+.sec {
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.sec > button {
+    font-size: 1.5rem;
+    background-color: var(--main-theme);
+    padding: 0.5em;
+    border: 0.1em solid var(--bar-theme);
+}
+
+
 
 .menu-animation-container {
     position: fixed;
@@ -103,9 +165,67 @@ svg {
     display: flex;
     height: 100vh;
     transform: translateY(-100%);
+    z-index: 1;
 }
 .bar {
     width: 10vw;
     border: none;
     background-color: var(--bar-theme);
+    position: relative;
+    z-index: 5;
+}
+
+
+/*Resume section*/
+
+.resume {
+    font-size: 2rem;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    border: 0.1em solid var(--bar-theme);
+    border-top: none;
+    background-color: var(--resume-button-theme);
+    display: inline-block;
+    color: var(--resume-text-color);
+}
+
+.resume-bar {
+    background-color: var(--resume-button-bars);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 25%;
+}
+
+
+.resume-bar.second {
+    transform: translateX(100%);
+}
+
+.resume-bar.third {
+    transform: translateX(200%);
+}
+
+.resume-bar.fourth {
+    transform: translateX(300%);
+}
+
+/* Project section */
+
+.project {
+    background-color: var(--project-section-theme);
+    padding: 10em;
+}
+
+.project > p {
+    font-size: 5rem;
+    color: var(--main-theme);
+}
+
+.simpleDsa > img {
+    max-width: 30rem;
 }
