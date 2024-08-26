@@ -113,3 +113,43 @@ resumeBut.onpointerenter = () => {
 resumeBut.onpointerleave = () => {
     resumeBarTl.reverse();
 }
+
+/* dsa project animation section */
+
+let dsaCard = document.querySelector(".card.dsa");
+let firstShadow = document.querySelector(".dsa-project .shadow-one");
+
+let dsaCardTl = gsap.timeline({paused: true}).to(dsaCard, {
+    x: "-5rem",
+    y: "-5rem",
+    ease: "power4.out",
+}).to(firstShadow, {
+    x: "-3rem",
+    y: "-3rem",
+    ease: "power4.out",
+}, "<");
+
+dsaCard.onpointerenter = () => {
+    dsaCardTl.play();
+};
+
+dsaCard.onpointerleave = () => {
+    dsaCardTl.reverse();
+}
+
+/* visit site animation */
+
+const smoothBackground = document.querySelector(".smooth-change-background");
+const visitBut = document.querySelector(".details > button");
+let vistButTl = gsap.timeline({paused: true}).to(smoothBackground, {
+    width: "100%",
+}).to(visitBut.querySelector("p"), {
+    color: "var(--bar-theme)",
+}, "<")
+visitBut.onpointerenter = () => {
+    vistButTl.play();
+};
+
+visitBut.onpointerleave = () => {
+    vistButTl.reverse();
+}

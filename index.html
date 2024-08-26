@@ -12,6 +12,7 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="blockAnimations.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
     </head>
     <body>
@@ -61,23 +62,53 @@
                 <div class = "border left"></div>
                 <div class = "border right"></div>
                 <div class = "border bottom"></div>
-                <button class = "resume">
-                    <div class = "resume-bar first"></div>
-                    <div class = "resume-bar second"></div>
-                    <div class = "resume-bar third"></div>
-                    <div class = "resume-bar fourth"></div>
-                    <p>Get my resume</p>
-                </button>
+                <a href="assets/tutor-resume.pdf" download="">
+                    <button class = "resume">
+                        <div class = "resume-bar first"></div>
+                        <div class = "resume-bar second"></div>
+                        <div class = "resume-bar third"></div>
+                        <div class = "resume-bar fourth"></div>
+                        <p>Get my resume</p>
+                    </button>
+                </a>
             </section>
         </nav>
         <section class = "project">
+            <div class = "block-container top">
+                <div class = "blocks-row"></div>
+                <div class = "blocks-row"></div>
+                <div class = "blocks-row"></div>
+            </div>
+            <div class = "block-container bottom">
+                <div class = "blocks-row"></div>
+                <div class = "blocks-row"></div>
+                <div class = "blocks-row"></div>
+            </div>
             <p>My latest project</p>
-            <div class = "simpleDsa">
-                <img src="img/linkedlist.png">
-                <img src="img/bst.png">
+            <div class="project-cards">
+                <div class="dsa-project">
+                    <div class = "card dsa">
+                        <div class = "simpleDsa">
+                            <button class="img stack"></button>
+                            <button class = "img ll"></button>
+                            <button class = "img bst"></button>
+                        </div>
+                        <div class="details">
+                            <p class = "project-name">Simple Dsa</p>
+                            <button>
+                                <p>Visit Site</p>
+                                <div class = "smooth-change-background"></div>
+                            </button>
+                        </div>            
+                    </div>
+                    <div class = "shadow-one"></div>
+                    <div class = "shadow-two"></div>
+                </div>
+
             </div>
         </section>
         <script type="module" src="script.js"></script>
         <script type="module" src = "scroll.js"></script>
+        <script type="module" src = "blockanimation.js"></script>
     </body>
 </html>

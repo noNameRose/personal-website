@@ -1,0 +1,46 @@
+:root {
+    --block-background-top: #d8f3dc;
+    --block-background-bottom: #d8f3dc;
+
+}
+
+.block-container {
+    position: absolute;
+    width: 100%;
+    height: 25rem;
+    left: 0;
+    z-index: 100;
+}
+
+.block-container.top {
+    top: 0;
+
+}
+
+.block-container.bottom {
+    bottom: 0;
+}
+
+.blocks-row {
+    width: 100%;
+    height: 6.25rem;
+    display: flex;
+}
+
+.block {
+    width: 100%;
+    height: 100%;
+}
+
+.block-container.top .blocks-row .block {
+    opacity: 1;
+    background-color: var(--block-background-bottom);
+}
+
+
+.block-container.bottom .blocks-row .block {
+    opacity: 1;
+    background-color: var(--block-background-top);
+}
+
+

@@ -1,11 +1,21 @@
 let textScroll = document.querySelector(".project > p");
+let dsaProject = document.querySelector(".dsa-project");
 
 gsap.from(textScroll, {
-    x: "-5rem",
+    y: "-5rem",
     opacity: 0,
     scrollTrigger: {
         trigger: textScroll,
-        start: "-200% 70%",
-        markers: true
+        start: "-100% 70%",
+    }
+});
+
+gsap.from(dsaProject, {
+    y: "5rem",
+    opacity: 0,
+    scrollTrigger: {
+        trigger: dsaProject,
+        start: "-70% center",
     }
 })
+
