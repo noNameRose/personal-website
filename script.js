@@ -79,6 +79,7 @@ const introBorderLeft = document.querySelector(".border.left");
 const introBorderRight = document.querySelector(".border.right");
 const introBorderTop = document.querySelector(".border.top");
 const introBorderBottom = document.querySelector(".border.bottom");
+const resumeBut = document.querySelector(".resume");
 
 let borderAnimeTl = gsap.timeline();
 
@@ -90,14 +91,16 @@ borderAnimeTl.to(introBorderTop, {
     width: "100%",
 }).to(introBorderRight, {
     height: "100%",
-}, "<")
+}, "<").from(resumeBut, {
+    y: "10rem",
+    opacity: 0,
+})
 
 //---------------------------
 
 
 /* resume hover section */
 
-let resumeBut = document.querySelector(".resume");
 let resumeBars = document.querySelectorAll(".resume > .resume-bar")
 let resumeBarTl = gsap.timeline({paused: true}).to(resumeBars, {
     height: "100%",

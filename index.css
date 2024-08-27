@@ -7,20 +7,20 @@
 }
 
 :root {
-    --main-theme:#d8f3dc;
-    --main-title-background:#d8f3dc;
-    --main-title-text: #081c15;
-    --main-title-border: #081c15;
-    --main-title-shadow: #081c15;
-    --intro-border: #081c15;
-    --bar-theme: #081c15;
-    --li-border: #081c15;
-    --resume-button-theme: #081c15;
-    --resume-button-bars: #95d5b2;
-    --resume-text-color: #d8f3dc;
-    --project-section-theme: #081c15;
-    --project-card-theme: #d8f3dc;
-    --dsa-project-shadow-theme: #40916c;
+    --main-theme:#e2eff1;
+    --main-title-background:#e2eff1;
+    --main-title-text: #555273;
+    --main-title-border: #555273;
+    --main-title-shadow: #555273;
+    --intro-border: #555273;
+    --bar-theme: #555273;
+    --li-border: #555273;
+    --resume-button-theme: #555273;
+    --resume-button-bars: #65799b;
+    --resume-text-color: #e2eff1;
+    --project-section-theme: #555273;
+    --project-card-theme: #e2eff1;
+    --dsa-project-shadow-theme: #65799b;
     --smooth-background-color: #ffdc5e;
 }
 
@@ -33,7 +33,7 @@ html {
 
 .navigation {
     margin: 7em;
-    margin-bottom: 20em;
+    margin-bottom: 15em;
 }
 
 .nav-bar {
@@ -124,10 +124,12 @@ svg {
 
 .intro > .hello-text{
     font-size: 7rem;
+    color: var(--bar-theme);
 }
 
 .hello-text + p {
     font-size: 2rem;
+    color: var(--bar-theme);
 }
 
 /* animation for menu */
@@ -157,6 +159,7 @@ svg {
     background-color: var(--main-theme);
     padding: 0.5em;
     border: 0.1em solid var(--bar-theme);
+    color: var(--bar-theme);
 }
 
 
@@ -175,7 +178,7 @@ svg {
     border: none;
     background-color: var(--bar-theme);
     position: relative;
-    z-index: 5;
+    z-index: 10;
 }
 
 
@@ -223,8 +226,8 @@ svg {
 .project {
     background-color: var(--project-section-theme);
     padding: 10em;
-    padding-top: 20em;
-    padding-bottom: 20em;
+    padding-top: 30em;
+    padding-bottom: 30em;
     display: flex;
     flex-direction: column;
     gap: 7rem;
@@ -348,3 +351,67 @@ svg {
     z-index: 4;
 }
 
+
+/* skills section */
+
+.skills {
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1300px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1299px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+}

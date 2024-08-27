@@ -1,0 +1,100 @@
+:root {
+    --grids-items-theme: #e2eff1;
+    --grids-items-border: #555273;
+}
+
+.skills {
+    padding: 10em;
+    display: flex;
+    gap: 15rem;
+    padding-bottom: 20em;
+}
+
+.skills-grid {
+    display: inline-grid;
+    grid-template-columns: 10rem 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem;
+    gap: 0.2em;
+    background-color: var(--grids-items-border);
+    border-radius: 0.3em;
+    border: 0.2em solid var(--grids-items-border);
+}
+
+.grid-items {
+    border: none;
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--grids-items-theme);
+}
+
+.skills-title {
+    font-size: 5rem;
+    color: var(--grids-items-border);
+}
+
+#html {
+    background-image: url("/icon/html.svg");
+}
+
+
+#css {
+    background-image: url("/icon/css.svg");
+}
+
+#js {
+    background-image: url("/icon/js.svg");
+}
+
+
+#react {
+    background-image: url("/icon/react.png");
+}
+
+#java {
+    background-image: url("/icon/java.png");
+}
+
+
+#python {
+    background-image: url("/icon/python.png");
+}
+
+#c {
+    background-image: url("/icon/c.svg");
+}
+
+
+#gsap {
+    background-image: url("/icon/gsap.svg");
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.representative {
+    width: 100rem;
+    border: 2px solid var(--grids-items-border);
+    position: relative;
+}
+
+.representative > .virtual {
+    width: 100%;
+    height: 70%;
+}
+
+.representative > button {
+    width: 100%;
+    height: 70%;
+    border: none;
+    background-color: var(--grids-items-theme);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

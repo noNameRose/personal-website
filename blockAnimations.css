@@ -1,6 +1,6 @@
 :root {
-    --block-background-top: #d8f3dc;
-    --block-background-bottom: #d8f3dc;
+    --block-background-top: #e2eff1;
+    --block-background-bottom: #e2eff1;
 
 }
 
@@ -9,7 +9,6 @@
     width: 100%;
     height: 25rem;
     left: 0;
-    z-index: 100;
 }
 
 .block-container.top {
@@ -43,4 +42,10 @@
     background-color: var(--block-background-top);
 }
 
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 8px;
+    }
+}
 
