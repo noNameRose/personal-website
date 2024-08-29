@@ -1,13 +1,13 @@
 :root {
-    --grids-items-theme: #e2eff1;
-    --grids-items-border: #555273;
+    --grids-items-theme: #dbd8e3;
+    --grids-items-border: #2a2438;
 }
 
 .skills {
     padding: 10em;
     display: flex;
-    gap: 15rem;
     padding-bottom: 20em;
+    position: relative;
 }
 
 .skills-grid {
@@ -77,24 +77,63 @@
 
 .representative {
     width: 100rem;
-    border: 2px solid var(--grids-items-border);
     position: relative;
 }
 
-.representative > .virtual {
+.representative .virtual {
     width: 100%;
     height: 70%;
 }
 
-.representative > button {
+.representative .come-in-logo {
     width: 100%;
     height: 70%;
-    border: none;
     background-color: var(--grids-items-theme);
-    background-size: 10rem;
-    background-repeat: no-repeat;
-    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     position: absolute;
     top: 0;
     left: 0;
 }
+
+.representative .come-in-logo button {
+    width: 100%;
+    height: 70%;
+    border: none;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--grids-items-theme);
+}
+
+.representative .come-in-logo p {
+    font-size: 3rem;
+    color: var(--grids-items-border);
+}
+
+/* experience-level */
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-time, .confident-level {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.experience-time > p, .confident-level > p {
+    font-size: 1.5rem;
+}
+
+.amount {
+    height: 0.5rem;
+    background-color: var(--grids-items-border);
+    border-radius: 1rem;
+}
+

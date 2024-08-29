@@ -1,0 +1,44 @@
+
+
+
+.preload {
+    height: 10000000000vh;
+    width: 100vw;
+    top: 0;
+    position: absolute;
+    background-color: var(--bar-theme);
+    z-index: 1000000;
+}
+
+.circle {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    transform: translateX(-50%);
+    background-color: var(--main-theme);
+}
+
+.circle.top {
+    left: 50%;
+}
+
+.circle.bottom {
+    bottom: 0;
+    left: 50%;
+}
+
+
+.circle.center {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1px;
+}
+
+
+
+
+

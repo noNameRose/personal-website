@@ -91,10 +91,7 @@ borderAnimeTl.to(introBorderTop, {
     width: "100%",
 }).to(introBorderRight, {
     height: "100%",
-}, "<").from(resumeBut, {
-    y: "10rem",
-    opacity: 0,
-})
+}, "<");
 
 //---------------------------
 
@@ -156,3 +153,4 @@ visitBut.onpointerenter = () => {
 visitBut.onpointerleave = () => {
     vistButTl.reverse();
 }
+

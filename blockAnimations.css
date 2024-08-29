@@ -1,7 +1,7 @@
 :root {
-    --block-background-top: #e2eff1;
-    --block-background-bottom: #e2eff1;
-
+    --block-background-top: #dbd8e3;
+    --block-background-bottom: #dbd8e3;
+    --skills-block-background-bottom: #2a2438;
 }
 
 .block-container {
@@ -40,6 +40,11 @@
 .block-container.bottom .blocks-row .block {
     opacity: 1;
     background-color: var(--block-background-top);
+}
+
+.skills .block-container.bottom .blocks-row .block {
+    opacity: 1;
+    background-color: var(--skills-block-background-bottom);
 }
 
 

@@ -1,0 +1,49 @@
+
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (1300px < width < 1600px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (1000px < width < 1300px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (800px < width < 1000px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (500px < width < 800px) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media (600px < width < 800px) {
+    html {
+        font-size: 4px;
+    }
+}
+
+
+
+
+
+
+/* @media (max-width: 400px) {
+    html {
+        font-size: 4px;
+    }
+
+} */
