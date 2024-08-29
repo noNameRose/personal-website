@@ -106,6 +106,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-color: var(--grids-items-theme);
+    background-image: url(/icon/html.svg);
 }
 
 .representative .come-in-logo p {
@@ -133,7 +134,9 @@
 
 .amount {
     height: 0.5rem;
+    width: 15rem;
     background-color: var(--grids-items-border);
     border-radius: 1rem;
 }
+
 

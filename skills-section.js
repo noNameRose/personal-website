@@ -3,6 +3,17 @@ const skillsGridItems = document.querySelectorAll(".grid-items");
 const representLogo = document.querySelector(".representative > .virtual");
 const experienceBar = document.querySelector(".experience-time > .amount");
 const confidentBar = document.querySelector(".confident-level > .amount");
+const experienceText = document.querySelector(".experience-time > .amount-text");
+const confidentText = document.querySelector(".confident-level > .amount-text");
+gsap.to(document.querySelector(".come-in-logo > button"), {
+    repeat: -1,
+    yoyo: true,
+    keyframes: {
+        y: [0, "2rem", 0]
+    },
+    duration: 1,
+   
+})
 skillsGridItems.forEach(item => {
     let experience_Amount = data[item.id].experienceTimes;
     let confident_Level = data[item.id].confidentLevel;
@@ -54,15 +65,29 @@ skillsGridItems.forEach(item => {
         ease: "power3.out",
     });
     item.onpointerenter = () => {
-        //experienceBar.style.width = experience_Amount + "rem";
+        if (representLogo.nextElementSibling.className === "come-in-logo")
+            representLogo.nextElementSibling.remove();
+        experienceText.innerHTML = experience_Amount > 9 ? "1 year" : experience_Amount + " months";
+        confidentText.innerHTML = confident_Level;
         itemTl.play();
         representLogo.after(div); 
+        gsap.to(but, {
+            repeat: -1,
+            yoyo: true,
+            keyframes: {
+                y: [0, "2rem", 0]
+            },
+            duration: 1,
+           
+        });
         gsap.timeline().fromTo(div, {
             opacity: 0,
             y: "-5rem",
         }, {
             opacity: 1,
             y: 0,
+            ease: "power3.out",
+            duration: 1,
         }).fromTo(experienceBar, {
             width: 0
         }, {
@@ -71,11 +96,9 @@ skillsGridItems.forEach(item => {
             width: 0,
         }, {
             width: confident_amount + "rem",
-        }, "<")
-        ;
+        }, "<");
     }
     item.onpointerleave = () => {
         itemTl.reverse();
-        representLogo.nextElementSibling.remove();
     }
 })

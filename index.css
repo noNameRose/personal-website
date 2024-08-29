@@ -27,6 +27,8 @@
 
 html {
     background-color: var(--main-theme);
+    scrollbar-color: red;
+    overflow-x: hidden;
 }
 
 /* navigation section*/
@@ -91,14 +93,60 @@ svg {
 
 .intro {
     width: 100%;
-    padding: 10em;
+    padding: 7em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 2em;
     position: relative;
 }
+
+.surrounded-bar {
+    width: 0.2rem;
+    background-color: var(--bar-theme);
+    position: absolute;
+    display: inline-block;
+}
+
+.surrounded-bar.top{
+    height: 50%;
+    width: 0.2rem;
+    top: 0;
+    left: 50%;
+    transform: translateY(-100%);
+}
+
+.surrounded-bar.bottom{
+    height: 100%;
+    width: 0.2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(100%);
+    z-index: 100;
+}
+
+.surrounded-bar.bottom-left{
+    height: 100%;
+    width: 0.2rem;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: translateY(100%) rotate(45deg);
+    z-index: 100;
+}
+
+.surrounded-bar.bottom-right{
+    height: 100%;
+    width: 0.2rem;
+    bottom: 0;
+    right: 0;
+    transform-origin: top left;
+    transform: translateY(100%) rotate(-45deg);
+    z-index: 100;
+}
+
+
 
 .intro .border {
     background-color: var(--bar-theme);
@@ -124,15 +172,22 @@ svg {
 }
 
 .intro > .hello-text{
-    font-size: 7rem;
+    font-size: 5rem;
     color: var(--bar-theme);
     font-weight: bold;
     text-shadow: 0.05em 0.05em var(--text-shadow);
 }
 
 .hello-text + p {
-    font-size: 2rem;
+    font-size: 5rem;
     color: var(--bar-theme);
+    font-weight: bold;
+    text-shadow: 0.05em 0.05em var(--text-shadow);
+}
+
+span {
+    color: white;
+    text-shadow: 0.05em 0.05em var(--bar-theme);
 }
 
 /* animation for menu */
@@ -198,8 +253,8 @@ svg {
     color: var(--resume-text-color);
     position: absolute;
     bottom: 0;
-    right: 0;
-    transform: translateY(100%);
+    left: 50%;
+    transform: translate(-50%, 100%);
 }
 
 .resume-bar {
