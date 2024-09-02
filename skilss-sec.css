@@ -1,6 +1,6 @@
 :root {
-    --grids-items-theme: #dbd8e3;
-    --grids-items-border: #2a2438;
+    --grids-items-theme: white;
+    --grids-items-border: black;
 }
 
 .skills {

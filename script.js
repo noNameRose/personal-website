@@ -73,31 +73,10 @@ menuBut.onclick = () => {
     }
 }
 
-// intro border anime section 
-
-const introBorderLeft = document.querySelector(".border.left");
-const introBorderRight = document.querySelector(".border.right");
-const introBorderTop = document.querySelector(".border.top");
-const introBorderBottom = document.querySelector(".border.bottom");
-const resumeBut = document.querySelector(".resume");
-
-let borderAnimeTl = gsap.timeline();
-
-borderAnimeTl.to(introBorderTop, {
-    width: "100%",
-}).to(introBorderLeft, {
-    height: "100%",
-}, "<").to(introBorderBottom, {
-    width: "100%",
-}).to(introBorderRight, {
-    height: "100%",
-}, "<");
-
-//---------------------------
 
 
 /* resume hover section */
-
+const resumeBut = document.querySelector(".resume");
 let resumeBars = document.querySelectorAll(".resume > .resume-bar")
 let resumeBarTl = gsap.timeline({paused: true}).to(resumeBars, {
     height: "100%",
@@ -124,8 +103,8 @@ let dsaCardTl = gsap.timeline({paused: true}).to(dsaCard, {
     y: "-5rem",
     ease: "power4.out",
 }).to(firstShadow, {
-    x: "-3rem",
-    y: "-3rem",
+    x: "-2.5rem",
+    y: "-2.5rem",
     ease: "power4.out",
 }, "<");
 

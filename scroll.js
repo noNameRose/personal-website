@@ -1,5 +1,6 @@
 let textScroll = document.querySelector(".project > p");
-let dsaProject = document.querySelector(".dsa-project");
+let dsaProject = document.querySelector(".project-cards");
+
 
 gsap.from(textScroll, {
     y: "-5rem",
@@ -8,7 +9,8 @@ gsap.from(textScroll, {
     duration: 1,
     scrollTrigger: {
         trigger: textScroll,
-        start: "-100% center",
+        start: "-70% center",
+        toggleActions: "play none none reverse",
     }
 });
 
@@ -19,7 +21,8 @@ gsap.from(dsaProject, {
     duration: 1,
     scrollTrigger: {
         trigger: dsaProject,
-        start: "top center",
+        start: "-70% center",
+        toggleActions: "play none none reverse",
     }
-})
+});
 

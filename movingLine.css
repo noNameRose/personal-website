@@ -1,0 +1,35 @@
+.moving-line-horizontal {
+    position: absolute;
+    top: 50%;
+    border: 0.1rem solid var(--bar-theme);
+    width: 15%;
+}
+
+.moving-line-horizontal.top {
+    left: 0;
+}
+
+.moving-line-horizontal.bottom {
+    right: 0;
+}
+
+.moving-line-vertical {
+    height: 15%;
+    border: 0.1rem solid var(--bar-theme);
+    position: absolute;
+    left: 0;
+    transform: translate(-50%);
+}
+
+
+.moving-line-vertical.left {
+    top: 0;
+}
+
+
+.moving-line-vertical.right {
+    bottom: 0;
+}
+
+
+

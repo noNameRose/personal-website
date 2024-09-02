@@ -7,20 +7,20 @@
 }
 
 :root {
-    --main-theme:#dbd8e3;
-    --main-title-background:#dbd8e3;
-    --main-title-text: #2a2438;
-    --main-title-border: #2a2438;
-    --main-title-shadow: #2a2438;
-    --intro-border: #2a2438;
-    --bar-theme: #2a2438;
-    --li-border: #2a2438;
-    --resume-button-theme: #2a2438;
-    --resume-button-bars: #5c5470;
-    --resume-text-color: #dbd8e3;
-    --project-section-theme: #2a2438;
-    --project-card-theme: #dbd8e3;
-    --dsa-project-shadow-theme: #5c5470;
+    --main-theme:white;
+    --main-title-background:white;
+    --main-title-text: black;
+    --main-title-border: black;
+    --main-title-shadow: black;
+    --intro-border: black;
+    --bar-theme: black;
+    --li-border: black;
+    --resume-button-theme: black;
+    --resume-button-bars: white;
+    --resume-text-color: white;
+    --project-section-theme: black;
+    --project-card-theme: white;
+    --dsa-project-shadow-theme: white;
     --smooth-background-color: #ffdc5e;
     --text-shadow: white;
 }
@@ -47,41 +47,45 @@ html {
 .title {
     position: relative;
     display: inline-block;
+    align-self: flex-end;
 }
 .main-title {
     font-size: 2rem;
     padding: 1em;
-    border: 0.1em solid var(--main-title-border);
+    border: 0.07em solid var(--main-title-border);
     border-radius: 0.2rem;
     background-color: var(--main-title-background);
     color: var(--main-title-text);
-    transform: translate(-1rem, -1rem);
+    transform: translate(-1.5rem, -1.5rem);
 }
 
 .shadow {
     width: 100%;
     height: 100%;
-    background-color: var(--main-title-shadow);
+    background-color: var(--bar-theme);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1000;
 }
 
-svg {
-    height: 4.5rem;
-}
 
 .icon {
     background-color: var(--main-theme);
-    padding: 1em;
-    border: 0.2rem solid var(--main-title-border);
+    padding: 1.5em;
+    border: 0.1rem solid var(--main-title-border);
     transform: translate(-1rem, -1rem);
+    background-image: url("/icon/menu-2-line.svg");
+    background-position: center;
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    font-size: 2rem;
 }
 
 .menu-button {
-    position: relative;
+    position: sticky;
     z-index: 10;
+    align-self: flex-end;
 }
 
 
@@ -92,7 +96,7 @@ svg {
 
 
 .intro {
-    width: 100%;
+    max-width: 100%;
     padding: 7em;
     display: flex;
     flex-direction: column;
@@ -103,47 +107,52 @@ svg {
 }
 
 .surrounded-bar {
-    width: 0.2rem;
-    background-color: var(--bar-theme);
+    border-left: 0.1em dashed var(--bar-theme);
+    background-color: var(--dsa-project-shadow-theme);
     position: absolute;
     display: inline-block;
+    width: 0.07em;
+    height: 100%;
+
 }
 
 .surrounded-bar.top{
-    height: 50%;
-    width: 0.2rem;
     top: 0;
     left: 50%;
     transform: translateY(-100%);
 }
 
+.surrounded-bar.top-left{
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+.surrounded-bar.top-right{
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+}
+
 .surrounded-bar.bottom{
-    height: 100%;
-    width: 0.2rem;
     bottom: 0;
     left: 50%;
     transform: translateY(100%);
-    z-index: 100;
 }
 
 .surrounded-bar.bottom-left{
-    height: 100%;
-    width: 0.2rem;
     bottom: 0;
     left: 0;
     transform-origin: top right;
-    transform: translateY(100%) rotate(45deg);
-    z-index: 100;
+    transform: translateY(100%);
 }
 
 .surrounded-bar.bottom-right{
     height: 100%;
-    width: 0.2rem;
     bottom: 0;
     right: 0;
     transform-origin: top left;
-    transform: translateY(100%) rotate(-45deg);
-    z-index: 100;
+    transform: translateY(100%);
 }
 
 
@@ -151,35 +160,38 @@ svg {
 .intro .border {
     background-color: var(--bar-theme);
     position: absolute;
-    padding: 0.1em;
+    background-color: var(--dsa-project-shadow-theme);
 }
 
 .intro .border.top {
     top: 0;
-    
+    border-bottom: 0.1em dashed var(--bar-theme);
 }
 
 .intro .border.left {
     left: 0;
+    border-left: 0.1em dashed var(--bar-theme);
 }
 
 .intro .border.right {
     right: 0;
+    border-right: 0.1em dashed var(--bar-theme);
 }
 
 .intro .border.bottom {
     bottom: 0;
+    border-bottom: 0.1em dashed var(--bar-theme);
 }
 
-.intro > .hello-text{
-    font-size: 5rem;
+.hello-text{
+    font-size: 3rem;
     color: var(--bar-theme);
     font-weight: bold;
     text-shadow: 0.05em 0.05em var(--text-shadow);
 }
 
-.hello-text + p {
-    font-size: 5rem;
+pre {
+    font-size: 3rem;
     color: var(--bar-theme);
     font-weight: bold;
     text-shadow: 0.05em 0.05em var(--text-shadow);
@@ -187,7 +199,7 @@ svg {
 
 span {
     color: white;
-    text-shadow: 0.05em 0.05em var(--bar-theme);
+    text-shadow: 0.1em 0.1em var(--bar-theme), -0.03em -0.03em var(--bar-theme);
 }
 
 /* animation for menu */
@@ -216,7 +228,7 @@ span {
     font-size: 1.5rem;
     background-color: var(--main-theme);
     padding: 0.5em;
-    border: 0.1em solid var(--bar-theme);
+    border: 0.1rem solid var(--bar-theme);
     color: var(--bar-theme);
 }
 
@@ -246,7 +258,7 @@ span {
 .resume {
     font-size: 2rem;
     padding: 1em;
-    border: 0.1em solid var(--bar-theme);
+    border: 0.07em solid var(--bar-theme);
     border-top: none;
     background-color: var(--resume-button-theme);
     display: inline-block;
@@ -300,6 +312,17 @@ span {
 
 /* Dsa project */
 
+.project-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.project-description {
+    font-size: 2rem;
+    color: white;
+}
 .card.dsa {
     background-color: var(--project-card-theme);
     display: inline-flex;

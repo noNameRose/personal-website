@@ -17,13 +17,14 @@
         <link href="skilss-sec.css" rel="stylesheet">
         <link href="preload.css" rel="stylesheet">
         <link href="mediaQuery.css" rel="stylesheet">
+        <link href="movingLine.css" rel="stylesheet">
     </head>
     <body>
-        <!-- <div class = "preload">
+        <div class = "preload">
             <button class = "circle top"></button>
             <button class = "circle bottom"></button>
-            <button class = "circle center"></button>
-        </div> -->
+            <button class = "container"></button>
+        </div>
         <div class = "menu-animation-container">
             <button class = "bar"></button>
             <button class = "bar"></button>
@@ -40,7 +41,7 @@
             <div class = "nav-bar">
                 <div class = "title">
                     <button class = "main-title">
-                        Dat Nguyen
+                        DAT NGUYEN
                     </button>
                     <div class = "shadow"></div>
                 </div>
@@ -57,23 +58,50 @@
                     </div>
                     <div class = "menu-button">
                         <button class = "icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
                         </button>
                         <div class = "shadow"></div>
                     </div>
                 </div>
             </div>
             <section class="intro">
-                <div class = "surrounded-bar top"></div>
-                <div class = "surrounded-bar bottom"></div>
-                <div class = "surrounded-bar bottom-left"></div>
-                <p class = "hello-text">Hi there, I'm Dat</p>
-                <p>I enjoy <span>coding</span> and making <span>fun</span> stuff</p>
-                <p >Nice to meet you</p>
-                <div class = "border top"></div>
-                <div class = "border left"></div>
-                <div class = "border right"></div>
-                <div class = "border bottom"></div>
+                <div class = "surrounded-bar top">
+                    <button class = "moving-line-vertical right"></button>
+                </div>
+                <div class = "surrounded-bar bottom">
+                    <button class = "moving-line-vertical left"></button>
+                </div>
+                <div class = "surrounded-bar bottom-left">
+                    <button class = "moving-line-vertical right"></button>
+                </div>
+                <div class = "surrounded-bar bottom-right">
+                    <button class = "moving-line-vertical right"></button>
+                </div>
+                <div class = "surrounded-bar top-left">
+                    <button class = "moving-line-vertical left"></button>
+                </div>
+                <div class = "surrounded-bar top-right">
+                    <button class = "moving-line-vertical left"></button>
+                </div>
+                <div class = "intro-text">
+                    <p class = "hello-text">Hi There, I'm Dat</p>
+                    <div class = "revealer"></div>
+                </div>
+                <div class = "intro-text bottom-line">
+                    <pre>I ENJOY <span>CODING </span> AND MAKING <span>FUN</span> STUFF</pre>
+                    <div class="revealer"></div>
+                </div>
+                <div class = "border top">
+                    <button class = "moving-line-horizontal top"></button>
+                </div>
+                <div class = "border left">
+                    <button class = "moving-line-vertical left"></button>
+                </div>
+                <div class = "border right">
+                    <button class = "moving-line-vertical right"></button>
+                </div>
+                <div class = "border bottom">
+                    <button class = "moving-line-horizontal bottom"></button>
+                </div>
                 <a href="assets/tutor-resume.pdf" download="">
                     <button class = "resume">
                         <div class = "resume-bar first"></div>
@@ -118,6 +146,9 @@
                     <div class = "shadow-one"></div>
                     <div class = "shadow-two"></div>
                 </div>
+                <p class = "project-description">
+                    Make Data Structure and Algorithm easy 
+                                             with Visualization</p>
             </div>
         </section>
         <section class = "skills">
@@ -168,6 +199,7 @@
         <script type="module" src = "blockanimation.js"></script>
         <script type="module" src="skills-section.js"></script>
         <script type="module" src="preload.js"></script>
+        <script type="module" src="movingLine.js"></script>
     </body>
     </body>
 </html>

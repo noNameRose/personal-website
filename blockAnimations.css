@@ -1,7 +1,7 @@
 :root {
-    --block-background-top: #dbd8e3;
-    --block-background-bottom: #dbd8e3;
-    --skills-block-background-bottom: #2a2438;
+    --block-background-top: white;
+    --block-background-bottom: white;
+    --skills-block-background-bottom: black;
 }
 
 .block-container {

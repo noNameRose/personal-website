@@ -24,15 +24,21 @@
     }
 }
 
-@media (500px < width < 800px) {
+@media (600px < width < 800px) {
     html {
         font-size: 6px;
     }
 }
 
-@media (600px < width < 800px) {
+@media (400px < width < 600px) {
     html {
         font-size: 4px;
+    }
+}
+
+@media (width < 400px) {
+    html {
+        font-size: 2px;
     }
 }
 
