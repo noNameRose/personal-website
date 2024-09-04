@@ -26,3 +26,18 @@ gsap.from(dsaProject, {
     }
 });
 
+
+/* skills scroll */
+
+gsap.from(document.querySelector(".skills-list .intro-text > p"), {
+    y: "-100%",
+    ease: "power4.inOut",
+    duration: 1,
+    scrollTrigger: {
+        trigger: document.querySelector(".skills-list .intro-text > p") ,
+        start: "top 70%",
+        toggleActions: "play none none reverse",
+        
+    }
+});
+

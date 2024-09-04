@@ -51,6 +51,8 @@ html {
 }
 .main-title {
     font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -0.05rem;
     padding: 1em;
     border: 0.07em solid var(--main-title-border);
     border-radius: 0.2rem;
@@ -84,7 +86,7 @@ html {
 
 .menu-button {
     position: sticky;
-    z-index: 10;
+    z-index: 10000000;
     align-self: flex-end;
 }
 
@@ -187,19 +189,38 @@ html {
     font-size: 3rem;
     color: var(--bar-theme);
     font-weight: bold;
-    text-shadow: 0.05em 0.05em var(--text-shadow);
 }
 
-pre {
+.intro-text > pre {
     font-size: 3rem;
     color: var(--bar-theme);
     font-weight: bold;
-    text-shadow: 0.05em 0.05em var(--text-shadow);
 }
 
 span {
     color: white;
     text-shadow: 0.1em 0.1em var(--bar-theme), -0.03em -0.03em var(--bar-theme);
+}
+
+.react-icon {
+    display: inline;
+    background-color: var(--bar-theme);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    padding: 0.5rem;
+}
+
+.react-icon > button {
+    padding: 3rem;
+    background-image: url("/icon/react-brands-solid\ \(1\).svg");
+    background-size: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--bar-theme);
 }
 
 /* animation for menu */
@@ -248,7 +269,7 @@ span {
     border: none;
     background-color: var(--bar-theme);
     position: relative;
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 
@@ -297,7 +318,7 @@ span {
 .project {
     background-color: var(--project-section-theme);
     padding: 10em;
-    padding-top: 30em;
+    padding-top: 40em;
     padding-bottom: 30em;
     display: flex;
     flex-direction: column;
@@ -437,9 +458,122 @@ span {
 /* footer section */
 
 footer {
-    background-color: var(--bar-theme);
-    padding: 30em;
+   background-color: var(--bar-theme);
+   display: flex;
+   padding: 10rem;
+   justify-content: space-between;
+   gap: 2rem;
+   padding-top: 20rem;
+   align-items: center;
+
 }
+
+
+.contact-text > * {
+    color: var(--dsa-project-shadow-theme);
+}
+
+.index {
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-sec > .contact-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-title {
+    font-size: 4rem;
+}
+
+.talk {
+    font-size: 2.5rem;
+}
+
+.footer-menus {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    gap: 7rem;
+    position: relative;
+}
+
+.footer-menu > * {
+    font-size: 2rem;
+    color: white;
+}
+
+.footer-menu > a{
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+}
+
+.view {
+    opacity: 0;
+    color: black;
+    position: relative;
+    z-index: 10;
+}
+
+.top-background {
+    position: absolute;
+    width: 100%;
+    background-color:var(--dsa-project-shadow-theme);
+    padding: 0.01rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.big-name {
+    font-size: 10rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media-icon {
+    gap: 2rem;
+    display: flex;
+}
+
+.social-media-icon  button {
+    padding: 2rem;
+    background-color: var(--bar-theme);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0.1rem solid var(--dsa-project-shadow-theme);
+    background-size: 2rem;
+    border-radius: 0.2rem;
+}
+
+.linkedin {
+    background-image: url("/icon/linkedin-icon-white.svg");
+}
+
+.instagram {
+    background-image: url("/icon/instagram-icon-white.svg");
+}
+
+.facebook {
+    background-image: url("/icon/facebook-icon-white.svg");
+}
+
+.footer-icon {
+    position: relative;;
+}
+
+
+
+
 
 
 

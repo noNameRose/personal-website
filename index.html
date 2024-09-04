@@ -18,13 +18,34 @@
         <link href="preload.css" rel="stylesheet">
         <link href="mediaQuery.css" rel="stylesheet">
         <link href="movingLine.css" rel="stylesheet">
+        <link href="menu-page.css" rel="stylesheet">
     </head>
     <body>
-        <div class = "preload">
+        <!-- <div class = "preload">
             <button class = "circle top"></button>
             <button class = "circle bottom"></button>
             <button class = "container"></button>
-        </div>
+        </div> -->
+        <!-- <div class = "menu-page">
+            <div class = "menu-link">
+                <a>
+                    <p>HOME</p>
+                    <div class = "top-background-menu"></div>
+                </a>
+                <a>
+                    <p>ABOUT</p>
+                    <div class = "top-background-menu"></div>
+                </a>
+                <a>
+                    <p>PROJECTS</p>
+                    <div class = "top-background-menu"></div>
+                </a>
+                <a>
+                    <p>SKILLS</p>
+                    <div class = "top-background-menu"></div>
+                </a>
+            </div>
+        </div> -->
         <div class = "menu-animation-container">
             <button class = "bar"></button>
             <button class = "bar"></button>
@@ -111,9 +132,12 @@
                         <p>Get my resume</p>
                     </button>
                 </a>
+                <div class="react-icon">
+                    <button></button>
+                </div>
             </section>
         </nav>
-        <section class = "project">
+        <section class = "project" id = "projects">
             <div class = "block-container top">
                 <div class = "blocks-row"></div>
                 <div class = "blocks-row"></div>
@@ -151,7 +175,7 @@
                                              with Visualization</p>
             </div>
         </section>
-        <section class = "skills">
+        <section class = "skills" id = "skills">
             <div class = "representative">
                 <div class="virtual"></div>
                 <div class = "come-in-logo">
@@ -172,7 +196,10 @@
                 </div>
             </div>
             <div class = "skills-list">
-                <p class = "skills-title">My Tech Stacks</p>
+                <div class = "intro-text">
+                    <p class = "skills-title">My Tech Stacks</p>
+                    <div class = "revealer"></div>
+                </div>
                 <div class="skills-grid">
                     <button class = "grid-items" id = "html"></button>
                     <button class = "grid-items" id = "css"></button>
@@ -191,8 +218,59 @@
                 <div class = "blocks-row"></div>
             </div>
         </section>
-        <footer>
-
+        <footer id  = "contact">
+            <!-- <div class = "contact"> -->
+                <div class="contact-sec">
+                    <div class = "contact-text">
+                        <p class = "footer-title">
+                            Let's Contact
+                        </p>
+                        <p class = "talk">
+                            I'm always available for a conversation!
+                        </p>
+                        <pre class = "talk">Feel free to email me at <a>nguy5079@umn.edu</a> 
+or reach out to me on social media.
+                        </pre>
+                    </div>
+                    <div class = "social-media-icon">
+                            <a href="https://www.linkedin.com/in/dat-nguyen-76191b2a4/" target="_blank">
+                                <button class = "linkedin"></button>
+                            </a>
+                            <a href="https://www.instagram.com/_novembre2_/" target="_blank">
+                                <button class = "instagram"></button>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100024498231980" target="_blank">
+                                <button class = "facebook"></button>
+                            </a>
+                    </div>
+                </div>
+                <div class = "footer-menus">
+                    <div class = "footer-menu">
+                        <p class = "index">01</p>
+                        <a href="./index.html">Home</a>
+                        <p class = "view">view</p>
+                        <div class = "top-background"></div>
+                    </div>
+                    <div class = "footer-menu">
+                        <p class = "index">02</p>
+                        <a href="">Skills</a>
+                        <p class = "view">view</p>
+                        <div class = "top-background"></div>
+                    </div>
+                    <div class = "footer-menu">
+                        <p class = "index">03</p>
+                        <a href="./">About</a>
+                        <p class = "view">view</p>
+                        <div class = "top-background"></div>
+                    </div>
+                    <div class = "footer-menu">
+                        <p class = "index">04</p>
+                        <a href="">Projects</a>
+                        <p class = "view">view</p>
+                        <div class = "top-background"></div>
+                    </div>
+                </div>
+            <!-- </div> -->
         </footer>
         <script type="module" src="script.js"></script>
         <script type="module" src = "scroll.js"></script>
