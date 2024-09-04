@@ -92,7 +92,7 @@ menuBut.onclick = () => {
                     onComplete: () => {
                         document.body.firstChild.remove();
                     }
-                }, "<");
+                });
                 isClicked = false;   
             }
         })
@@ -100,8 +100,8 @@ menuBut.onclick = () => {
     else {
         gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
             y: "5rem",
-            stagger: 0.1,
             opacity: 0,
+            duration: 0.2,
         }).to(bars, {
             y: "200%",
             stagger: 0.025,
@@ -119,7 +119,7 @@ function createMenuPage() {
     menuPage.className = "menu-page";
     menuPage.innerHTML = `
             <div class = "menu-link">
-                <a>
+                <a href="./index.html" style="text-decoration: none">
                     <p>HOME</p>
                     <div class = "top-background-menu"></div>
                 </a>
@@ -135,7 +135,10 @@ function createMenuPage() {
                     <p>SKILLS</p>
                     <div class = "top-background-menu"></div>
                 </a>
-                <div class = "menu-social-media-link"></div>
+                <a>
+                    <p>CONTACT</p>
+                    <div class = "top-background-menu"></div>
+                </a>
             </div>
     `;
     return menuPage;
