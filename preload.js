@@ -1,35 +1,42 @@
-const circleTop = document.querySelector(".circle.top");
-const circleBottom = document.querySelector(".circle.bottom");
+const preload = document.querySelector(".preload");
 const introBorderLeft = document.querySelector(".border.left");
 const introBorderRight = document.querySelector(".border.right");
 const introBorderTop = document.querySelector(".border.top");
 const introBorderBottom = document.querySelector(".border.bottom");
 const helloText = document.querySelector(".hello-text");
 
-gsap.timeline()
-//.from(circleTop, {
-//     y: "-200%",
-//     opacity: 0,
-// }).from(circleBottom, {
-//     y: "200%",
-//     opacity: 0,
-// }).to(circleBottom, {
-//     top: "50%",
-//     duration: .4,
-// }).to(circleTop, {
-//     top: "50%",
-//     duration: .4
-// }, "<").to(".container", {
-//     scale: 1,
-//     onComplete: () => {
-//         document.querySelector(".preload").remove();
-//     }
-// })
+
+async function creteGrid() {
+    for (let i = 0; i < 400; i++) {
+        const but = document.createElement("button");
+        but.style.border = "none";
+        but.style.backgroundColor = "black";
+        preload.append(but);
+    }
+}
+
+async function getGrid() {
+    await creteGrid();
+}
+
+getGrid();
+
+gsap.timeline().to(preload.querySelectorAll("button"), {
+    scale: 0,
+    stagger: {
+        amount: 1,
+        from: "edges",
+        grid: "auto",
+    },
+    onComplete: () => {
+        preload.style.display = "none";
+    }
+})
 .from(helloText, {
     y: "-100%",
     ease: "power4.inOut",
     duration: 1,
-}, "<").from(document.querySelector(".intro-text.bottom-line > p"), {
+}).from(document.querySelector(".intro-text.bottom-line > p"), {
     y: "100%",
     ease: "power4.inOut",
     duration: 1,

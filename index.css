@@ -24,6 +24,7 @@
     --dsa-project-shadow-theme: white;
     --smooth-background-color: #ffdc5e;
     --text-shadow: white;
+    --blur-bar-theme: rgb(128, 128, 128);
 }
 
 html {
@@ -107,6 +108,25 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.blur-bar {
+    height: 100%;
+    padding: 0.01em;
+    background-color: var(--blur-bar-theme);
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.blur-bar.left {
+    left: 25%;
+}
+.blur-bar.center {
+    left: 50%;
+}
+.blur-bar.right {
+    left: 75%;
 }
 
 .surrounded-bar {
