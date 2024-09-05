@@ -80,19 +80,27 @@ menuBut.onclick = () => {
                 menuLinkesTl.reverse();
             };
             menuLink.onclick = () => {
-                let section = document.getElementById(`${(menuLink.querySelector("p").innerHTML).toLowerCase()}`);
-                section.scrollIntoView(false);
-                gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
-                    y: "5rem",
-                    stagger: 0.1,
-                    opacity: 0,
-                }).to(bars, {
-                    y: "200%",
-                    stagger: 0.025,
-                    onComplete: () => {
-                        document.body.firstChild.remove();
-                    }
-                });
+                let nameSec = (menuLink.querySelector("p").innerHTML).toLowerCase();
+                if (nameSec === "about") {
+                    const a = document.createElement("a");
+                    a.href = "/about-page";
+                    a.click();
+                }
+                else {
+                    let section = document.querySelector(`.${nameSec}-title`);
+                    section.scrollIntoView(true);
+                    gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
+                        y: "5rem",
+                        stagger: 0.1,
+                        opacity: 0,
+                    }).to(bars, {
+                        y: "200%",
+                        stagger: 0.025,
+                        onComplete: () => {
+                            document.body.firstChild.remove();
+                        }
+                    });
+                }
                 isClicked = false;   
             }
         })

@@ -29,7 +29,7 @@ gsap.timeline()
     y: "-100%",
     ease: "power4.inOut",
     duration: 1,
-}, "<").from(document.querySelector(".intro-text.bottom-line > pre"), {
+}, "<").from(document.querySelector(".intro-text.bottom-line > p"), {
     y: "100%",
     ease: "power4.inOut",
     duration: 1,

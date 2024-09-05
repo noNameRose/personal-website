@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Ginka TRIAL Medium";
+
 }
 
 :root {
@@ -191,19 +192,32 @@ html {
 
 .hello-text{
     font-size: 4rem;
+    letter-spacing: -0.05em;
     color: var(--bar-theme);
     font-weight: bold;
 }
 
-.intro-text > pre {
+.intro-text > p {
     font-size: 4rem;
     color: var(--bar-theme);
     font-weight: bold;
+    letter-spacing: -0.05em;
 }
 
-span {
+.special-text {
+    position: relative;
+}
+.base {
     color: white;
-    text-shadow: 0.1em 0.1em var(--bar-theme), -0.03em -0.03em var(--bar-theme);
+    -webkit-text-stroke: 0.01rem black;
+    z-index: 4;
+}
+
+.faux {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .react-icon {
@@ -489,7 +503,7 @@ footer {
     gap: 2rem;
 }
 
-.footer-title {
+.contact-title {
     font-size: 4rem;
 }
 

@@ -1,0 +1,52 @@
+@import url(https://db.onlinewebfonts.com/c/351166aedb6763a9771aa6ad49a5dfaf?family=Ginka+TRIAL+Medium);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ginka TRIAL Medium";
+}
+
+:root {
+    --main-theme: black;
+}
+
+main {
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4rem;
+}
+
+.about-title {
+    font-size: 5rem;
+    position: relative;
+}
+
+.about-essay {
+    font-size: 1.25rem;
+}
+
+.title {
+    position: relative;
+}
+
+.shadow {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    position: absolute;
+
+}
+
+
+
+
+
