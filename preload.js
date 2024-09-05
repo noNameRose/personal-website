@@ -25,7 +25,7 @@ gsap.timeline().to(preload.querySelectorAll("button"), {
     scale: 0,
     stagger: {
         amount: 1,
-        from: "edges",
+        from: "ends",
         grid: "auto",
     },
     onComplete: () => {

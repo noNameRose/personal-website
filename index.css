@@ -1,4 +1,9 @@
-@import url(https://db.onlinewebfonts.com/c/351166aedb6763a9771aa6ad49a5dfaf?family=Ginka+TRIAL+Medium);
+@font-face {
+    font-family: "Ginka TRIAL Medium";
+    src: url("/OnlineWebFonts_COM_cae6c97c1030f72dca99c5e69d4fec26/Ginka\ TRIAL\ Medium/Ginka TRIAL MEDIUM.ttf");
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -61,6 +66,7 @@ html {
     background-color: var(--main-title-background);
     color: var(--main-title-text);
     transform: translate(-1.5rem, -1.5rem);
+    z-index: 10000000;
 }
 
 .shadow {
@@ -127,6 +133,23 @@ html {
 }
 .blur-bar.right {
     left: 75%;
+}
+.blur-bar.top-left {
+    left: 25%;
+    transform: translateY(-100%);
+}
+.blur-bar.top-right {
+    left: 75%;
+    transform: translateY(-100%);
+}
+.blur-bar.bottom-left {
+    left: 25%;
+    transform: translateY(100%);
+}
+
+.blur-bar.bottom-right {
+    left: 75%;
+    transform: translateY(100%);
 }
 
 .surrounded-bar {
