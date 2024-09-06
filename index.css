@@ -118,8 +118,7 @@ html {
 
 .blur-bar {
     height: 100%;
-    padding: 0.2px;
-    background-color: var(--blur-bar-theme);
+    border: 0.2px solid var(--blur-bar-theme);
     position: absolute;
     z-index: 1;
     opacity: 0.5;
