@@ -1,42 +1,42 @@
 
 
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
     html {
         font-size: 16px;
     }
 }
 
-@media (1300px < width < 1600px) {
+@media only screen and (1300px < width < 1600px) {
     html {
         font-size: 13px;
     }
 }
 
-@media (1000px < width < 1300px) {
+@media only screen and (1000px < width < 1300px) {
     html {
         font-size: 10px;
     }
 }
 
-@media (800px < width < 1000px) {
+@media only screen and (800px < width < 1000px) {
     html {
         font-size: 8px;
     }
 }
 
-@media (600px < width < 800px) {
+@media only screen and (600px < width < 800px) {
     html {
         font-size: 6px;
     }
 }
 
-@media (400px < width < 600px) {
+@media only screen and (400px < width < 600px) {
     html {
         font-size: 4px;
     }
 }
 
-@media (width < 400px) {
+@media only screen and (width < 400px) {
     html {
         font-size: 2px;
     }
