@@ -121,7 +121,7 @@ html {
     border: 0.2px solid var(--blur-bar-theme);
     position: absolute;
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .blur-bar.left {
@@ -159,6 +159,7 @@ html {
     width: 0.07em;
     height: 100%;
     z-index: 1;
+    opacity: 0.5;
 }
 
 .surrounded-bar.top{
@@ -210,6 +211,7 @@ html {
     background-color: var(--bar-theme);
     position: absolute;
     background-color: var(--dsa-project-shadow-theme);
+    opacity: 0.5;
 }
 
 .intro .border.top {
@@ -520,17 +522,24 @@ html {
 footer {
    background-color: var(--bar-theme);
    display: flex;
-   padding: 10rem;
-   justify-content: space-between;
-   gap: 2rem;
-   padding-top: 20rem;
+   flex-direction: column;
    align-items: center;
-   padding-bottom: 30rem;
+   padding: 10rem;
+   padding-top: 20rem;
+    gap: 4rem;
 }
 
 
 .contact-text > * {
     color: var(--dsa-project-shadow-theme);
+}
+
+
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    align-items: center;
 }
 
 .index {
@@ -592,7 +601,7 @@ footer {
     position: absolute;
     width: 100%;
     background-color:var(--dsa-project-shadow-theme);
-    padding: 0.2px;
+    border-top: 0.01rem solid var(--dsa-project-shadow-theme);
     top: 0;
     left: 0;
 }
@@ -630,10 +639,48 @@ footer {
     background-image: url("/icon/facebook-icon-white.svg");
 }
 
+.leetcode {
+    background-image: url("/icon/leetcode.svg");
+}
+
 .footer-icon {
     position: relative;;
 }
 
+.footer-moving-lines {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-moving-line {
+    width: 100%;
+    border-top: 0.3rem solid var(--dsa-project-shadow-theme);
+    position: relative;
+}
+
+.footer-moving-thing {
+    width: 10%;
+    height: 1rem;
+    background-color: var(--dsa-project-shadow-theme);
+    transform: translateY(-50%);
+    border-radius: 0.5rem;
+    position: absolute;
+    top:0;
+}
+
+.footer-moving-thing.first {
+    left: 0;
+}
+
+.footer-moving-thing.second {
+    right: 0;
+}
+
+.footer-moving-thing.third {
+    left: 50%;
+}
 
 
 

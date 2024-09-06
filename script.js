@@ -53,9 +53,12 @@ let isClicked = false;
 menuBut.onclick = () => {
     if (!isClicked) {
         document.body.prepend(createMenuPage());
+        document.querySelector("html").style.overflow = "hidden";
         gsap.timeline().to(bars, {
             y: "100%",
             stagger: 0.025,
+            onComplete: () => {
+            }
         }).fromTo(document.querySelectorAll(".menu-link > a"), {
             y: "5rem",
             stagger: 0.1,
@@ -80,6 +83,7 @@ menuBut.onclick = () => {
                 menuLinkesTl.reverse();
             };
             menuLink.onclick = () => {
+                document.querySelector("html").style.overflow = "auto";
                 let nameSec = (menuLink.querySelector("p").innerHTML).toLowerCase();
                 if (nameSec === "about") {
                     const a = document.createElement("a");
@@ -106,6 +110,7 @@ menuBut.onclick = () => {
         })
     }
     else {
+        document.querySelector("html").style.overflow = "auto";
         gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
             y: "5rem",
             opacity: 0,
@@ -228,6 +233,39 @@ gsap.to(reactIcon, {
 /* footer section */
 
 const footerMenus = document.querySelectorAll(".footer-menu");
+const footerMovingThings = document.querySelectorAll(".footer-moving-thing");
+footerMovingThings.forEach(footerMovingThing => {
+    if (footerMovingThing.classList.contains("first")) {
+        gsap.to(footerMovingThing, {
+            repeat: -1,
+            yoyo: true,
+            duration: 4,
+            keyframes: {
+                left: ["0", "30%", "50%", "90%", "30%"],
+            }
+        });
+    }
+    else if (footerMovingThing.classList.contains("second")) {
+        gsap.to(footerMovingThing, {
+            repeat: -1,
+            yoyo: true,
+            duration: 4,
+            keyframes: {
+                right: ["0", "20%", "70%", "80%", "50%"],
+            }
+        });
+    }
+    else {
+        gsap.to(footerMovingThing, {
+            repeat: -1,
+            yoyo: true,
+            duration: 4,
+            keyframes: {
+                left: ["50%", "20%", "70%", "80%", "50%"],
+            }
+        });
+    }
+})
 footerMenus.forEach(footerMenu => {
     let footerTl = gsap.timeline({paused: true}).to(footerMenu.querySelector(".top-background"), {
         height: "100%",

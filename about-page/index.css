@@ -1,10 +1,13 @@
-@import url(https://db.onlinewebfonts.com/c/351166aedb6763a9771aa6ad49a5dfaf?family=Ginka+TRIAL+Medium);
+@font-face {
+    font-family: "Ginka";
+    src: url("/font/Ginka\ TRIAL\ Medium.ttf");
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"roboto";
+    font-family:"Ginka";
 }
 
 :root {

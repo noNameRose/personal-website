@@ -24,7 +24,8 @@ getGrid();
 
 
 gsap.timeline({delay: 1}).to(preload.querySelectorAll("button"), {
-    scale: 0,
+    // scale: 0,
+    opacity: 0,
     stagger: {
         amount: 1,
         from: "ends",
