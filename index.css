@@ -593,7 +593,7 @@ footer {
     position: absolute;
     width: 100%;
     background-color:var(--dsa-project-shadow-theme);
-    padding: 0.01rem;
+    padding: 0.2px;
     top: 0;
     left: 0;
 }
