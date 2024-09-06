@@ -21,7 +21,9 @@ async function getGrid() {
 
 getGrid();
 
-gsap.timeline().to(preload.querySelectorAll("button"), {
+
+
+gsap.timeline({delay: 1}).to(preload.querySelectorAll("button"), {
     scale: 0,
     stagger: {
         amount: 1,

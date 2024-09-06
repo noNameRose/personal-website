@@ -9,6 +9,23 @@
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
 }
+
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    border: 2px solid red;
+    z-index: 100000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    font-size: 10rem;
+    font-weight: bold;
+}
 /* reveal text section */
 
 .intro-text {

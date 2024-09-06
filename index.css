@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Ginka TRIAL Medium";
-    src: url("/OnlineWebFonts_COM_cae6c97c1030f72dca99c5e69d4fec26/Ginka\ TRIAL\ Medium/Ginka TRIAL MEDIUM.ttf");
+    font-family: "Ginka";
+    src: url("/font/Ginka\ TRIAL\ Medium.ttf");
 }
 
 
@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Ginka TRIAL Medium";
+    font-family: "Ginka";
 
 }
 
