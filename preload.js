@@ -28,7 +28,7 @@ gsap.timeline({delay: 1}).to(preload.querySelectorAll("button"), {
     opacity: 0,
     stagger: {
         amount: 1,
-        from: "ends",
+        from: "random",
         grid: "auto",
     },
     onComplete: () => {
@@ -39,7 +39,7 @@ gsap.timeline({delay: 1}).to(preload.querySelectorAll("button"), {
     y: "-100%",
     ease: "power4.inOut",
     duration: 1,
-}).from(document.querySelector(".intro-text.bottom-line > p"), {
+}).from(document.querySelector(".intro-text.second-line > pre"), {
     y: "100%",
     ease: "power4.inOut",
     duration: 1,

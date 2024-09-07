@@ -41,6 +41,6 @@
     transform: translateY(-100%);
 }
 
-.intro-text.bottom-line > .revealer {
+.intro-text.second-line > .revealer {
     transform: translateY(100%);
 }

@@ -1,4 +1,4 @@
-const mainTitle = document.querySelector(".main-title");
+const mainTitle = document.querySelector(".home-title");
 const menuBut = document.querySelector(".icon");
 const bars = document.querySelectorAll(".bar");
 const sections = document.querySelectorAll(".sec button");
