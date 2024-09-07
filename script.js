@@ -1,12 +1,14 @@
+import {createTransitionAnimation} from "./skills-contact-transitions.js";
+
 const mainTitle = document.querySelector(".home-title");
 const menuBut = document.querySelector(".icon");
 const bars = document.querySelectorAll(".bar");
 const sections = document.querySelectorAll(".sec button");
-const footer = document.querySelector("footer");
+
 sections.forEach(section => {
     let tl = gsap.timeline({paused: true}).to(section, {
-        x: "-1rem",
-        y: "-1rem",
+        x: "0",
+        y: "0",
         ease: "power4.out",
         duration: 0.2,
     });
@@ -85,25 +87,23 @@ menuBut.onclick = () => {
             menuLink.onclick = () => {
                 document.querySelector("html").style.overflow = "auto";
                 let nameSec = (menuLink.querySelector("p").innerHTML).toLowerCase();
-                if (nameSec === "about") {
-                    const a = document.createElement("a");
-                    a.href = "/about-page";
-                    a.click();
+                let isAbout = nameSec === "about"
+                if (isAbout) {
+                    createTransitionAnimation(nameSec, "white", true);
                 }
                 else {
-                    let section = document.querySelector(`.${nameSec}-title`);
-                    section.scrollIntoView(true);
-                    gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
-                        y: "5rem",
-                        stagger: 0.1,
-                        opacity: 0,
-                    }).to(bars, {
-                        y: "200%",
-                        stagger: 0.025,
-                        onComplete: () => {
-                            document.body.firstChild.remove();
-                        }
-                    });
+                    createTransitionAnimation(nameSec, "white", isAbout, true);
+                    // gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
+                    //     y: "5rem",
+                    //     stagger: 0.1,
+                    //     opacity: 0,
+                    // }).to(bars, {
+                    //     y: "200%",
+                    //     stagger: 0.025,
+                    //     onComplete: () => {
+                    //         document.body.firstChild.remove();
+                    //     }
+                    // }, "<");
                 }
                 isClicked = false;   
             }
@@ -269,16 +269,23 @@ footerMovingThings.forEach(footerMovingThing => {
 footerMenus.forEach(footerMenu => {
     let footerTl = gsap.timeline({paused: true}).to(footerMenu.querySelector(".top-background"), {
         height: "100%",
-    }).to([footerMenu.querySelector("a"), footerMenu.querySelector(".index")], {
+    }).to([footerMenu.querySelector(".categorize"), footerMenu.querySelector(".index")], {
         color: "black",
     }, "<").to(footerMenu.querySelector(".view"), {
         opacity: 1,
     }, "<");
     footerMenu.onpointerenter = () => {
         footerTl.play();
-    }
+    };
     footerMenu.onpointerleave = () => {
         footerTl.reverse();
+    };
+    footerMenu.onclick = () => {
+        let secName = footerMenu.querySelector(".categorize").innerHTML.toLowerCase();
+        if (secName === "about")
+            createTransitionAnimation(secName, "white", true);
+        else
+            createTransitionAnimation(secName, "white");
     }
 })
 

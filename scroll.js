@@ -41,3 +41,4 @@ gsap.from(document.querySelector(".skills-list .intro-text > p"), {
     }
 });
 
+

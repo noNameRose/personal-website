@@ -1,6 +1,6 @@
 const title = document.querySelector(".about-title");
 const essay = document.querySelector("article");
-gsap.timeline().from(title, {
+gsap.timeline({delay: 1,}).from(title, {
     y: "-100%",
     ease: "power1.inOut",
 }).from(essay, {

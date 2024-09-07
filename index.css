@@ -298,6 +298,7 @@ html {
     padding: 0.5em;
     border: 0.1rem solid var(--bar-theme);
     color: var(--bar-theme);
+    transform: translate(-0.7rem, -0.7rem);
 }
 
 
@@ -565,8 +566,7 @@ footer {
     color: white;
 }
 
-.footer-menu > a{
-    text-decoration: none;
+.footer-menu > p{
     position: relative;
 }
 
