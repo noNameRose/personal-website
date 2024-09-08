@@ -87,23 +87,12 @@ menuBut.onclick = () => {
             menuLink.onclick = () => {
                 document.querySelector("html").style.overflow = "auto";
                 let nameSec = (menuLink.querySelector("p").innerHTML).toLowerCase();
-                let isAbout = nameSec === "about"
+                let isAbout = nameSec === "about";
                 if (isAbout) {
                     createTransitionAnimation(nameSec, "white", true);
                 }
                 else {
                     createTransitionAnimation(nameSec, "white", isAbout, true);
-                    // gsap.timeline().to(document.querySelectorAll(".menu-link > a"), {
-                    //     y: "5rem",
-                    //     stagger: 0.1,
-                    //     opacity: 0,
-                    // }).to(bars, {
-                    //     y: "200%",
-                    //     stagger: 0.025,
-                    //     onComplete: () => {
-                    //         document.body.firstChild.remove();
-                    //     }
-                    // }, "<");
                 }
                 isClicked = false;   
             }
@@ -132,7 +121,7 @@ function createMenuPage() {
     menuPage.className = "menu-page";
     menuPage.innerHTML = `
             <div class = "menu-link">
-                <a href="./index.html" style="text-decoration: none">
+                <a>
                     <p>HOME</p>
                     <div class = "top-background-menu"></div>
                 </a>

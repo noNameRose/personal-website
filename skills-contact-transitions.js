@@ -45,7 +45,7 @@ export function createTransitionAnimation(secName, color, isAbout, isMenuPage) {
                 let link_to_about = document.createElement("a");
                 link_to_about.href = "./about-page/index.html";
                 link_to_about.click();
-                // setTimeout(() => transitionPage.remove(), 2000);
+                setTimeout(() => transitionPage.remove(), 2000);
             }
         }
     });
