@@ -30,22 +30,17 @@ export function createTransitionAnimation(secName, color, isAbout, isMenuPage) {
             if (!isAbout) {
                 document.querySelector(`.${secName}-title`).scrollIntoView(true);
                 if (isMenuPage) {
-                    gsap.set(document.querySelectorAll(".menu-link > a"), {
-                        opacity: 0,
-                    });
-                    gsap.set(document.querySelectorAll(".bar"), {
-                        y: "200%",
-                        onComplete: () => {
-                            document.body.firstChild.remove();
-                        }
-                    }, "<");
+                    removeMenuPage();
                 }
             }
             else {
                 let link_to_about = document.createElement("a");
                 link_to_about.href = "./about-page/index.html";
                 link_to_about.click();
-                setTimeout(() => transitionPage.remove(), 2000);
+                setTimeout(() => {
+                    transitionPage.remove();
+                    removeMenuPage();
+                    }, 2000);
             }
         }
     });
@@ -62,4 +57,16 @@ export function createTransitionAnimation(secName, color, isAbout, isMenuPage) {
             }
         });
     }
+}
+
+function removeMenuPage() {
+    gsap.set(document.querySelectorAll(".menu-link > a"), {
+        opacity: 0,
+    });
+    gsap.set(document.querySelectorAll(".bar"), {
+        y: "200%",
+        onComplete: () => {
+            document.body.firstChild.remove();
+        }
+    }, "<");
 }
