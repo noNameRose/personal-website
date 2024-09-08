@@ -90,7 +90,39 @@ html {
     background-size: 3rem;
     background-repeat: no-repeat;
     font-size: 2rem;
+    position: relative;
 }
+
+.close-but {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("/icon/xmark-solid.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.close-but-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.close-but-shadow-items {
+    background-color: var(--bar-theme);
+    opacity: 0;
+}
+
 
 .menu-button {
     position: sticky;
@@ -374,9 +406,27 @@ html {
     position: relative;
 }
 
-.project > p {
+.projects-title-container {
+    position: relative;
+    align-self: flex-start;
+    
+}
+.projects-title {
     font-size: 5rem;
+    letter-spacing: -0.05em;
     color: var(--main-theme);
+    display: flex;
+    gap: 2rem;
+}
+
+.project-title-revealer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
 }
 
 /* Dsa project */
@@ -402,7 +452,7 @@ html {
     z-index: 1000;
     position: relative;
     border: 0.2em solid var(--bar-theme);
-
+    /* transform: translate(-3rem, -3rem); */
 }
 
 .simpleDsa {
@@ -493,6 +543,8 @@ html {
     border-radius: 0.5em;
 }
 
+
+
 .dsa-project .shadow-one {
     z-index: 5;
     border: 0.2em solid var(--bar-theme);
@@ -526,6 +578,34 @@ footer {
     justify-content: space-between;
     gap: 10rem;
     align-items: center;
+}
+
+.categorize-wrapper {
+    position: relative;
+}
+
+.categorize-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: translateX(100%);
+}
+
+.index-wrapper {
+    position: relative;
+}
+
+.index-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    background: black;
 }
 
 .index {

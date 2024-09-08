@@ -69,4 +69,10 @@ function removeMenuPage() {
             document.body.firstChild.remove();
         }
     }, "<");
+    gsap.set(document.querySelectorAll(".close-but-shadow-items"), {
+        opacity: 0,
+    });
+    gsap.set(document.querySelector(".close-but"), {
+        scale: 0,
+    });
 }

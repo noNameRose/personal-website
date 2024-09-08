@@ -37,6 +37,14 @@ let menuButTl = gsap.timeline({paused: true}).to(menuBut, {
 
 /* menu but section*/
 
+const closeButShadow = document.querySelector(".close-but-shadow");
+for (let i = 0; i < 25; i++) {
+    let square = document.createElement("div");
+    square.className = "close-but-shadow-items";
+    closeButShadow.append(square);
+    
+}
+
 menuBut.onpointerenter = () => {
     menuButTl.play();
 };
@@ -69,7 +77,17 @@ menuBut.onclick = () => {
             y: "0",
             stagger: 0.1,
             opacity: 1,
-        }, "<");
+        }, "<").to(document.querySelectorAll(".close-but-shadow-items"), {
+            opacity: 1,
+            stagger: {
+                amount: 0.5,
+                from: "ends",
+            }
+        }, "<").fromTo(document.querySelector(".close-but"), {
+            scale: 0,
+        }, {
+            scale: 1,
+        }, "-=0.5");
         isClicked = true;
         const menuLinks  = document.querySelectorAll(".menu-link > a");
         menuLinks.forEach(menuLink => {
@@ -110,7 +128,17 @@ menuBut.onclick = () => {
             onComplete: () => {
                 document.body.firstChild.remove();
             }
-        }, "<");
+        }, "<").fromTo(document.querySelector(".close-but"), {
+            scale: 1,
+        }, {
+            scale: 0,
+        }, "<").to(document.querySelectorAll(".close-but-shadow-items"), {
+            opacity: 0,
+            stagger: {
+                amount: 0.5,
+                from: "end",
+            }
+        }, "-=0.5");
         isClicked = false;   
     }
 }
@@ -173,12 +201,12 @@ let dsaCard = document.querySelector(".card.dsa");
 let firstShadow = document.querySelector(".dsa-project .shadow-one");
 
 let dsaCardTl = gsap.timeline({paused: true}).to(dsaCard, {
-    x: "-5rem",
-    y: "-5rem",
+    x: "0rem",
+    y: "0rem",
     ease: "power4.out",
 }).to(firstShadow, {
-    x: "-2.5rem",
-    y: "-2.5rem",
+    x: "0rem",
+    y: "0rem",
     ease: "power4.out",
 }, "<");
 
@@ -262,6 +290,10 @@ footerMenus.forEach(footerMenu => {
         color: "black",
     }, "<").to(footerMenu.querySelector(".view"), {
         opacity: 1,
+    }, "<").set(footerMenu.querySelector(".categorize-shadow"), {
+        opacity: 0,
+    }, "<").set(footerMenu.querySelector(".index-shadow"), {
+        opacity: 0,
     }, "<");
     footerMenu.onpointerenter = () => {
         footerTl.play();
