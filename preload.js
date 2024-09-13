@@ -52,4 +52,3 @@ gsap.timeline({delay: 1}).to(preload.querySelectorAll("button"), {
 }).to(introBorderRight, {
     height: "100%",
 }, "<");
-
