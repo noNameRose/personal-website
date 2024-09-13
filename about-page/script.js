@@ -62,9 +62,9 @@ but.onclick = () => {
         onComplete: () => {
             a.click();
             exitPageItems.forEach(item => {
-                item.style.zIndex = 0;
+                item.style.opacity = 0;
             });
-            exitPage.style.zIndex = "";
+            exitPage.style.zIndex = -1;
         }
     })
 }
