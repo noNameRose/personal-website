@@ -235,6 +235,13 @@ visitBut.onpointerleave = () => {
     vistButTl.reverse();
 }
 
+visitBut.onclick = () => {
+    let a = document.createElement("a");
+    a.href = "https://startling-torte-da44f3.netlify.app/";
+    a.target = "black";
+    a.click();
+}
+
 /* react icon */
 
 const reactIcon = document.querySelector(".react-icon > button");

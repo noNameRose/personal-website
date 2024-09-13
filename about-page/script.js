@@ -61,10 +61,12 @@ but.onclick = () => {
         },
         onComplete: () => {
             a.click();
-            exitPageItems.forEach(item => {
-                item.style.opacity = 0;
-            });
-            exitPage.style.zIndex = -1;
+            setTimeout(() => {
+                exitPageItems.forEach(item => {
+                    item.style.opacity = 0;
+                });
+                exitPage.style.zIndex = -1;
+            }, 1500);
         }
     })
 }
