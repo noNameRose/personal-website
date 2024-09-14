@@ -1,7 +1,6 @@
 let projectTitleWords = document.querySelectorAll(".projects-title p");
-let dsaCard = document.querySelector(".card.dsa");
-let dsaCardShadow = document.querySelector(".shadow-one");
 let footerIndices = document.querySelectorAll(".index");
+let cards = document.querySelectorAll(".card");
 gsap.from(projectTitleWords, {
     y: "-100%",
     duration: 0.6,
@@ -14,30 +13,57 @@ gsap.from(projectTitleWords, {
     }
 })
 
-
-gsap.to(dsaCard, {
-    y: "-3rem",
-    x: "-3rem",
-    ease: "elastic.out",
-    duration: 1,
-    scrollTrigger: {
-        trigger: dsaCard,
-        start: "top center",
-        toggleActions: "play none none reverse",
-    }
-});
-
-gsap.to(dsaCardShadow, {
-    y: "-1.2rem",
-    x: "-1.2rem",
-    ease: "elastic.out",
-    duration: 1,
-    scrollTrigger: {
-        trigger: dsaCardShadow, 
-        start: "top center",
-        toggleActions: "play none none reverse",
-    }
+cards.forEach(card => {
+    gsap.to(card, {
+        y: "-3rem",
+        x: "-3rem",
+        ease: "elastic.out",
+        duration: 1,
+        scrollTrigger: {
+            trigger: card,
+            start: "top center",
+            toggleActions: "play none none reverse",
+        }
+    });
+    gsap.to(card.nextElementSibling, {
+        y: "-1.2rem",
+        x: "-1.2rem",
+        ease: "elastic.out",
+        duration: 1,
+        scrollTrigger: {
+            trigger: card.nextElementSibling, 
+            start: "top center",
+            toggleActions: "play none none reverse",
+        }
+    })
 })
+
+
+// gsap.to(textToVoiceCard, {
+//     y: "-3rem",
+//     x: "-3rem",
+//     ease: "elastic.out",
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: textToVoiceCard,
+//         start: "top center",
+//         toggleActions: "play none none reverse",
+//     }
+// });
+
+// gsap.to(textToVoiceCardShadow, {
+//     y: "-1.2rem",
+//     x: "-1.2rem",
+//     ease: "elastic.out",
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: textToVoiceCardShadow, 
+//         start: "top center",
+//         toggleActions: "play none none reverse",
+//     }
+// })
+
+
 
 
 /* skills scroll */

@@ -398,7 +398,7 @@ html {
 .project {
     background-color: var(--project-section-theme);
     padding: 10em;
-    padding-top: 45em;
+    padding-top: 45rem;
     padding-bottom: 30em;
     display: flex;
     flex-direction: column;
@@ -442,7 +442,7 @@ html {
     font-size: 2rem;
     color: white;
 }
-.card.dsa {
+.card.dsa, .card.text-to-voice{
     background-color: var(--project-card-theme);
     display: inline-flex;
     padding: 1rem;
@@ -528,13 +528,13 @@ html {
     color: var(--bar-theme);
 }
 
-.dsa-project {
+.card-wrapper {
     position: relative;
     display: inline-block;
 }
 
 
-.dsa-project .shadow-one, .dsa-project .shadow-two {
+.card-wrapper .shadow-one, .card-wrapper .shadow-two {
     height: 100%;
     width: 100%;
     background-color: var(--resume-button-bars);
@@ -545,15 +545,28 @@ html {
 
 
 
-.dsa-project .shadow-one {
+.card-wrapper .shadow-one {
     z-index: 5;
     border: 0.2em solid var(--bar-theme);
 }
 
-.dsa-project .shadow-two {
+.card-wrapper .shadow-two {
     z-index: 4;
 }
 
+.text-to-voice-img {
+    width: 47rem;
+    height: 23rem;
+    background: url("/img/text-voice-img.png");
+    background-size: contain;
+    background-position: center center;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+}
 
 /* footer section */
 

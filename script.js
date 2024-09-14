@@ -197,50 +197,58 @@ resumeBut.onpointerleave = () => {
 
 /* dsa project animation section */
 
-let dsaCard = document.querySelector(".card.dsa");
-let firstShadow = document.querySelector(".dsa-project .shadow-one");
+let projectCards = document.querySelectorAll(".card");
+projectCards.forEach(card => {
+    let cardTl = gsap.timeline({paused: true}).to(card, {
+        x: "0rem",
+        y: "0rem",
+        ease: "power4.out",
+    }).to(card.nextElementSibling, {
+        x: "0rem",
+        y: "0rem",
+        ease: "power4.out",
+    }, "<");
+    
+    card.onpointerenter = () => {
+        cardTl.play();
+    };
+    
+    card.onpointerleave = () => {
+        cardTl.reverse();
+    }
+})
 
-let dsaCardTl = gsap.timeline({paused: true}).to(dsaCard, {
-    x: "0rem",
-    y: "0rem",
-    ease: "power4.out",
-}).to(firstShadow, {
-    x: "0rem",
-    y: "0rem",
-    ease: "power4.out",
-}, "<");
 
-dsaCard.onpointerenter = () => {
-    dsaCardTl.play();
-};
-
-dsaCard.onpointerleave = () => {
-    dsaCardTl.reverse();
-}
 
 /* visit site animation */
 
-const smoothBackground = document.querySelector(".smooth-change-background");
-const visitBut = document.querySelector(".details > button");
-let vistButTl = gsap.timeline({paused: true}).to(smoothBackground, {
-    width: "100%",
-}).to(visitBut.querySelector("p"), {
-    color: "var(--bar-theme)",
-}, "<")
-visitBut.onpointerenter = () => {
-    vistButTl.play();
-};
 
-visitBut.onpointerleave = () => {
-    vistButTl.reverse();
-}
-
-visitBut.onclick = () => {
-    let a = document.createElement("a");
-    a.href = "https://startling-torte-da44f3.netlify.app/";
-    a.target = "black";
-    a.click();
-}
+const visitButs = document.querySelectorAll(".details > button");
+visitButs.forEach(visitBut => {
+    let vistButTl = gsap.timeline({paused: true}).to(visitBut.querySelector(".smooth-change-background"), {
+        width: "100%",
+    }).to(visitBut.querySelector("p"), {
+        color: "var(--bar-theme)",
+    }, "<")
+    visitBut.onpointerenter = () => {
+        vistButTl.play();
+    };
+    
+    visitBut.onpointerleave = () => {
+        vistButTl.reverse();
+    }
+    
+    visitBut.onclick = () => {
+        let a = document.createElement("a");
+        let cardParent = visitBut.closest(".card");
+        if (cardParent.classList.contains("dsa"))
+            a.href = "https://startling-torte-da44f3.netlify.app/";
+        else
+            a.href = "https://inspiring-marigold-125faf.netlify.app/"
+        a.target = "black";
+        a.click();
+    }
+})
 
 /* react icon */
 
