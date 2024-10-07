@@ -20,8 +20,8 @@ export const data = {
         confidentLevel: "Confident"
     },
     react: {
-        experienceTimes: 3,
-        confidentLevel: "Some what Confident"
+        experienceTimes: 5,
+        confidentLevel: "Confident"
     },
     python: {
         experienceTimes: 10,
@@ -29,7 +29,7 @@ export const data = {
     },
     c: {
         name: "c",
-        experienceTimes: 0,
-        confidentLevel: "Nah"
+        experienceTimes: 3,
+        confidentLevel: "Confident"
     }
 }
